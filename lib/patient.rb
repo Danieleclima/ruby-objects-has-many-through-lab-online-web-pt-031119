@@ -24,4 +24,11 @@ class Patient
   def self.all
     @@all
   end
+  
+   def doctors
+    appointments.collect do |element|
+      element.doctor
+    end
+  end
+  
 end
