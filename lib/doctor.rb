@@ -27,7 +27,7 @@ class Doctor
   
   
   def patients
-    appointments.all.select do |element|
+    appointments.all.collect do |element|
       element.doctor
     end
   end
