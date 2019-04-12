@@ -3,6 +3,7 @@ class Doctor
   
   def initialize (name)
     @name = name
+    @@all << self
   end
  
   def self.all
@@ -13,4 +14,9 @@ class Doctor
     new_appointment = Appointment.new (patient, date)
     new_appointment.doctor = self
   end
+  
+  def patients
+    
+  end
+  
 end
