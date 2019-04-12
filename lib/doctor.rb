@@ -18,6 +18,12 @@ class Doctor
     new_appointment.doctor = self
   end
   
+  def appointments
+    Appointment.all.select do |appointments|
+      appointments.doctor == self 
+    end
+  end
+  
   def patients
     Appointment.all.select do |appointments|
       appointments.doctor == self
