@@ -31,6 +31,7 @@ class Doctor
   def patients
     appointments.collect do |element|
       element.patient
+      binding.pry
     end
   end
   
